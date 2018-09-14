@@ -1,0 +1,69 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<script type="text/javascript">
+		function sendBook(){
+			document.location.href="{{ url_for('web.save_to_gifts', isbn=book.isbn) }}"
+		}
+		function sendMine(){
+			document.location.href="{{ url_for('web.save_to_wish', isbn=book.isbn) }}"
+		}
+	</script>
+	<h2>&lt;&lt;{{ book.title }}&gt;&gt;</h2>
+	<img src="{{ book.image }}">
+	<p>ISBN: {{ book.isbn }}</p>
+	<p>发行商：{{ book.publisher }}</p>
+	<p>作者：{{ book.author }}</p>
+	<p>价格：{{ book.price }}</p>
+	<p>内容简介：{{ book.summary }}</p>
+	<button onclick="sendBook()">赠送此书</button><br>
+	<button onclick="sendMine()">加入到心愿清单</button>
+	
+	<hr>
+	<table>
+		<tr>赠送他人列表</tr>
+		<tr>
+			<th>姓名</th>
+			<th>时间</th>
+			<th>用户ID</th>
+			<th><a href="">向他请求此书</a></th>
+		</tr>
+	</table>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

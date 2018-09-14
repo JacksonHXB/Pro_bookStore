@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 传统的url设置 
+	<link rel="stylesheet" type="text/css" href="/static/test.css"/>
+-->
+<!-- 通过url_for()反向解析 -->
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/test.css')}}"/>
+</head>
+<body>
+	{% block head %}
+		<script type="text/javascript">
+			function login(){
+				window.location.href="{{ url_for('web.login') }}"
+			}
+			function register(){
+				window.location.href="{{ url_for('web.register') }}"
+			}
+			function logout(){
+				window.location.href="{{ url_for('web.logout') }}"
+			}
+			function upLately(){
+				window.location.href="{{ url_for('web.index') }}"
+			}
+			function sendCart(){
+				window.location.href="{{ url_for('web.my_gifts') }}"
+			}
+			function myCart(){
+				window.location.href="{{ url_for('web.my_wish') }}"
+			}
+			function fish(){
+				window.location.href="{{ url_for('web.') }}"
+			}
+		</script>
+		<button onclick="login()">登录</button><br>
+		<button onclick="register()">注册</button><br>
+		<button onclick="logout()">注销</button><br>
+		<button onclick="upLately()">最近上传</button><br>
+		<button onclick="sendCart()">赠送清单</button><br>
+		<button onclick="myCart()">心愿清单</button><br>
+		<button onclick="fish()">鱼漂</button>
+	{% endblock %}
+	
+	{% block content %}{% endblock %}
+	
+	{% block foot %}{% endblock %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

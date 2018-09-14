@@ -1,0 +1,88 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<h3>模板已经继承了！</h3>
+	
+	<!-- 消息闪现 -->
+	{% for message in get_flashed_messages() %}
+		{{message}}
+	{% endfor %}
+	
+	<!-- with域 :flash消息只会在这里面显示-->
+	{% with messages = get_flashed_messages() %}
+		{{messages}}
+	{% endwith %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
